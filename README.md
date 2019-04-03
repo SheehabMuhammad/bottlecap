@@ -62,8 +62,10 @@ Command "bison -d parser.y" will generate two files "parser.tab.h" and "parser.t
 Command "flex lexer.l" will require the "parser.tab.h" file beacuse it is included in the "lexer.l" file.
 The command "bison -d parser.y" may export files with diiferent name in linux machine. 
 Therefore, the file name in lexer.l also should be changed before running "flex lexer.l".
-If everything is good then the 3rd command should create an executable file which can be invoked to the COMMAND PROPMT or Terminal as BottleCap Interpreter
-Since there was no strict specification about the variable_name charecter length, I implented the code as it can only handle one charecter per variable_name. So, from a-z and A-Z, there are 52 possible variables.
+If everything is good then the 3rd command should create an executable file which can be invoked to the COMMAND PROPMT or Terminal as BottleCap Interpreter.
+
+
+I implented the code as it can only handle one charecter variable_name. So, you can create variables with name from a-z and A-Z. There are 52 possible variable names.
 
 ### Example/Tested Statements:
 ```
