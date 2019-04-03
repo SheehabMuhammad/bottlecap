@@ -2,7 +2,7 @@
 BottleCap - Programming Language Interpreter Design
 
 ##Grammar for the Language
-
+```
 program
       : statement '\n' 
       | program statement '\n'
@@ -29,9 +29,10 @@ term
       : number
       | identifier
       ;
+```
 
 #RegEx of the Interpreter      
-
+```
 "Print"         PRINT
 "Add"           ADD
 "with"          WITH
@@ -46,16 +47,17 @@ term
 [0-9]+          number
 [ \r\t]         whitespace
 [-+\*/\n]       -, +, *, /, \n
-
+```
 
 
 #Instructions to Compile the Interpreter:
 
-Windows CMD Commands:  
+Windows CMD Commands:
+```
   1. bison -d parser.y  
   2. flex lexer.l  
   3. gcc lex.yy.c parser.tab.c
-  
+ ```
 Command "bison -d parser.y" will generate two files "parser.tab.h" and "parser.tab.c". 
 Command "flex lexer.l" will require the "parser.tab.h" file beacuse it is included in the "lexer.l" file.
 The command "bison -d parser.y" may export files with diiferent name in linux machine. 
@@ -64,6 +66,7 @@ If everything is good then the 3rd command should create an executable file whic
 Since there was no strict specification about the variable_name charecter length, I implented the code as it can only handle one charecter per variable_name. So, from a-z and A-Z, there are 52 possible variables.
 
 Example/Tested Statements:
+```
 :Add 5 with 5 
 :Add 9 with 5 
 :Print 5 
@@ -77,3 +80,4 @@ Example/Tested Statements:
 :15 
 :Print Add Add 2 with 3 with Multiply 3 by 2 
 :1
+```
