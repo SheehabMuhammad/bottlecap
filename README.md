@@ -1,7 +1,7 @@
 # BottleCap
 BottleCap - Programming Language Interpreter Design
 
-#Grammar for the Language
+##Grammar for the Language
 
 program
       : statement '\n' 
