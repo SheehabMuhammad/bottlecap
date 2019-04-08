@@ -1,5 +1,5 @@
 # BottleCap
-BottleCap - Programming Language Interpreter Design
+BottleCap -A Simple Programming Language Interpreter Design
 
 ## Grammar for the Language
 ```
